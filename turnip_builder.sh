@@ -49,7 +49,7 @@ unzip "$ndkver"-linux.zip  &> /dev/null
 echo "Downloading mesa source (~30 MB) ..." $'\n'
 curl https://gitlab.freedesktop.org/mesa/mesa/-/archive/main/mesa-main.zip --output mesa-main.zip &> /dev/null
 ###
-echo "Exracting mesa source to a folder ..." $'\n'
+echo "Extracting mesa source to a folder ..." $'\n'
 unzip mesa-main.zip &> /dev/null
 cd mesa-main
 
@@ -76,7 +76,7 @@ EOF
 
 
 echo "Generating build files ..." $'\n'
-meson build-android-aarch64 --cross-file $workdir/mesa-main/android-aarch64 -Dbuildtype=release -Dplatforms=android -Dplatform-sdk-version=31 -Dandroid-stub=true -Dgallium-drivers= -Dvulkan-drivers=freedreno -Dfreedreno-kmds=kgsl -Db_lto=true &> $workdir/meson_log
+meson build-android-aarch64 --cross-file $workdir/mesa-main/android-aarch64 -Dbuildtype=release -Dplatforms=android -Dplatform-sdk-version=31 -Dandroid-stub=true -Dgallium-drivers=freedreno -Dvulkan-drivers=freedreno -Dfreedreno-kmds=kgsl -Db_lto=true &> $workdir/meson_log
 
 
 
@@ -136,3 +136,4 @@ if ! [ -a $workdir/turnip-23.2.0-T-Alpha_MrPurple.adpkg.zip ];
 	then echo -e "$red-Packing failed!$nocolor" && exit 1
 	else echo -e "$green-All done, you can take your module from here;$nocolor" && echo $workdir/turnip-23.0.0-T-Alpha_MrPurple.adpkg.zip
 fi
+find
