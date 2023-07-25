@@ -21,6 +21,9 @@ jobs:
     - name: Execute build script
       continue-on-error: true
       run: bash ./turnip_builder.sh
+      
+    - name: Checks
+      run: find
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
