@@ -29,7 +29,7 @@ for deps_chk in $deps;
 
 
 echo "Installing python Mako dependency (if missing) ..." $'\n'
-pip install mako &> /dev/null
+pip install mako > /dev/null
 
 
 
@@ -42,15 +42,15 @@ echo "Downloading android-ndk from google server (~506 MB) ..." $'\n'
 curl https://dl.google.com/android/repository/"$ndkver"-linux.zip --output "$ndkver"-linux.zip &> /dev/null
 ###
 echo "Exracting android-ndk to a folder ..." $'\n'
-unzip "$ndkver"-linux.zip  &> /dev/null
+unzip "$ndkver"-linux.zip  > /dev/null
 
 
 
 echo "Downloading mesa source (~30 MB) ..." $'\n'
-curl https://gitlab.freedesktop.org/mesa/mesa/-/archive/main/mesa-main.zip --output mesa-main.zip &> /dev/null
+curl https://gitlab.freedesktop.org/mesa/mesa/-/archive/main/mesa-main.zip --output mesa-main.zip > /dev/null
 ###
 echo "Extracting mesa source to a folder ..." $'\n'
-unzip mesa-main.zip &> /dev/null
+unzip mesa-main.zip > /dev/null
 cd mesa-main
 
 
