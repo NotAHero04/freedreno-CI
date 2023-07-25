@@ -136,4 +136,3 @@ if ! [ -a $workdir/turnip-23.2.0-T-Alpha_MrPurple.adpkg.zip ];
 	then echo -e "$red-Packing failed!$nocolor" && exit 1
 	else echo -e "$green-All done, you can take your module from here;$nocolor" && echo $workdir/turnip-23.0.0-T-Alpha_MrPurple.adpkg.zip
 fi
-find
